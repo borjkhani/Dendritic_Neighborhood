@@ -1,4 +1,6 @@
-# Dendritic_Neighborhood
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![MATLAB](https://img.shields.io/badge/MATLAB-R2020b+-blue.svg)](https://www.mathworks.com/products/matlab.html)
+
 
 # Dendritic Neighborhood Plasticity Model
 
@@ -42,11 +44,11 @@ generate_all_figures_polished
 
 If you use this code, please cite:
 
-> Borjkhani M, Borjkhani H, Bhimani MA. Dendritic Neighborhood State Controls Synaptic Plasticity Outcomes: A Computational Model of Local Gating Mechanisms. *Journal of Computational Neuroscience* (2026).
+> Borjkhani M, Borjkhani H, Sharif MA. Dendritic Neighborhood State Controls Synaptic Plasticity Outcomes: A Computational Model of Local Gating Mechanisms. *Journal of Computational Neuroscience* (2025).
 
 ## License
 
-MIT License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Author
 
