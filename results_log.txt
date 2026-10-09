@@ -1,0 +1,249 @@
+Dendritic neighbourhood plasticity model - revised figures (09-Oct-2026 21:31:38)
+
+> Figure 1: model schematic
+
+   Saved: figures_main/fig1_schematic.png
+> Figure 2: neighbourhood selects plasticity outcome
+   K =  0: dw = -0.001, peak Ca = 0.363, peak Vd = -68.0 mV, peak Vs = -51.8 mV, R_final = 4.00
+   K =  6: dw = -0.048, peak Ca = 0.533, peak Vd = -56.0 mV, peak Vs = -46.0 mV, R_final = 4.34
+   K = 12: dw = +0.210, peak Ca = 0.857, peak Vd = -42.8 mV, peak Vs = -36.7 mV, R_final = 1.28
+   Saved: figures_main/fig2_neighbourhood_selects_sign.png
+> Figure 3: phase diagram
+   min dw = -0.082, max dw = 0.952; LTD cells (<-0.01): 197, LTP cells (>0.01): 386, of 693
+   target alone: max dw = 0.000 (never LTP for strengths <= 1.0)
+   Saved: figures_main/fig3_phase_diagram.png
+> Figure 4: non-monotonic neighbourhood dependence
+   LTD for K = 3..8 (min -0.063 at K = 7); LTP from K = 9; max dw = 0.210 at K = 12; dw(K=20) = 0.133
+   R_final at K = 0/12/20: 4.00 / 1.28 / 1.21; max |total change| = 0.0127
+   K = 6: min dw = -0.073, max dw = +0.013 at s_n = 1.50, dw(s_n = 1.5) = +0.013
+   K = 10: min dw = -0.072, max dw = +0.169 at s_n = 0.50, dw(s_n = 1.5) = +0.121
+   K = 14: min dw = -0.059, max dw = +0.439 at s_n = 0.35, dw(s_n = 1.5) = +0.093
+   s_target = 0.4: min dw = -0.068, LTP from K = 13, max dw = +0.045 at K = 20, dw(K=20) = +0.045
+   s_target = 0.5: min dw = -0.063, LTP from K = 9, max dw = +0.210 at K = 12, dw(K=20) = +0.133
+   s_target = 0.6: min dw = -0.069, LTP from K = 7, max dw = +0.462 at K = 12, dw(K=20) = +0.191
+   s_target = 0.7: min dw = -0.070, LTP from K = 5, max dw = +0.651 at K = 10, dw(K=20) = +0.231
+   Saved: figures_main/fig4_ltd_facilitation_competition.png
+> Figure 5: 2x2 mechanistic dissection
+   matched B_fixed = 0.0634 (target-alone peak Ca = 0.363)
+   Full model         dw(K=0) = -0.001, dw(K=12) = +0.210, dw(K=20) = +0.133, max = +0.210, branch sum dw(K=20) = +2.80
+   Fixed Mg block     dw(K=0) = -0.002, dw(K=12) = +0.000, dw(K=20) = +0.000, max = +0.000, branch sum dw(K=20) = +0.00
+   No pool            dw(K=0) = -0.001, dw(K=12) = +0.694, dw(K=20) = +1.108, max = +1.108, branch sum dw(K=20) = +23.26
+   Neither            dw(K=0) = -0.002, dw(K=12) = +0.000, dw(K=20) = +0.000, max = +0.000, branch sum dw(K=20) = +0.00
+   Saved: figures_main/fig5_mechanistic_dissection.png
+> Figure 6: competition and normalization across a branch
+   Full model sum(w): 10.50 -> 13.86 | LTP 9, LTD 3 of 14 active | inactive max|dw| = 0 | corr(s, dw) = 0.88
+   No pool    sum(w): 10.50 -> 19.96 | LTP 10, LTD 2 of 14 active | inactive max|dw| = 0 | corr(s, dw) = 0.85
+   Saved: figures_main/fig6_competition_normalization.png
+> Figure 7: frequency dependence, weight dependence and history
+   freq response K =  0: +0.000 +0.000 +0.000 +0.000 -0.203 +0.925 +0.986 
+   freq response K =  4: +0.000 +0.000 +0.000 +0.000 -0.412 +0.549 +0.555 
+   freq response K = 10: +0.000 +0.000 +0.000 -0.294 +0.264 +0.272 +0.272 
+   freq response K = 16: -0.003 -0.007 -0.166 +0.121 +0.173 +0.173 +0.173 
+   w0 dependence K =  0: +0.00 +0.00 +0.00 +0.00 -0.00 -0.02 -0.07 -0.11 +0.08 +0.25 +0.32 +0.29 +0.21 +0.13 +0.03 -0.06 -0.15 -0.25 -0.34 
+   w0 dependence K =  6: +0.00 +0.00 +0.00 -0.01 -0.05 +0.03 +0.38 +0.58 +0.61 +0.54 +0.46 +0.37 +0.28 +0.18 +0.08 -0.02 -0.12 -0.22 -0.33 
+   w0 dependence K = 12: +0.00 +0.00 -0.02 -0.00 +0.21 +0.44 +0.45 +0.36 +0.25 +0.14 +0.04 -0.05 -0.14 -0.24 -0.33 -0.42 -0.52 -0.61 -0.70 
+   R_init dependence K = 10: dw(R=4) = +0.169, dw(R=0) = -0.067
+   R_init dependence K = 12: dw(R=4) = +0.210, dw(R=0) = -0.053
+   R_init dependence K = 16: dw(R=4) = +0.167, dw(R=0) = -0.043
+   Saved: figures_main/fig7_frequency_weight_history.png
+Main figures done.
+
+> Figure S1: electrical calibration
+   single input: spine-head EPSP = 16.6 mV, branch EPSP = 1.44 mV, ratio = 11.5
+   branch depolarization, single pulse: n=5: 7.1, n=10: 13.8, n=21: 27.7 mV (AMPA-only n=21: 21.6 mV)
+   branch depolarization, 20-Hz burst: n=1: 1.97, n=5: 9.9, n=10: 20.5, n=13: 27.2, n=21: 42.9 mV
+   burst, AMPA only: n=10: 12.6, n=21: 23.1 mV; NMDA boost at n=10: 62%, n=21: 86%
+   Saved: figures_supp/figS1_electrical_calibration.png
+> Figure S2: weight stabilization
+   K = 12: dw(400 ms) = +0.2099, dw(1000 ms) = +0.2099; |sum w + R change| = 3.56e-02
+   Saved: figures_supp/figS2_weight_stabilization.png
+> Figure S3: timing window
+   K = 9: dw(0) = +0.075, max +0.075 at +0 ms, min -0.083 at +20 ms
+   K = 12: dw(0) = +0.210, max +0.341 at +40 ms, min -0.092 at +80 ms
+   Saved: figures_supp/figS3_timing_window.png
+> Figure S4: history dependence
+   tau_R =  1000 ms: dw per epoch = +0.215 +0.154 +0.127 
+   tau_R = 10000 ms: dw per epoch = +0.210 +0.034 +0.032 
+   tau_R = 60000 ms: dw per epoch = +0.210 +0.008 +0.006 
+   control (epoch 2, tau_R = 60 s): epoch 1 +0.210 | depleted pool + evolved weights +0.009 | pool restored +0.174 | weights reset +0.038
+   Saved: figures_supp/figS4_history_dependence.png
+> Figure S5: parameter robustness
+   theta_LTP  = 0.5      min -0.035 | LTP from K =  6 | max +0.278 at K = 10 | dw(K=20) = +0.155
+   theta_LTP  = 0.6      min -0.063 | LTP from K =  9 | max +0.210 at K = 12 | dw(K=20) = +0.133
+   theta_LTP  = 0.7      min -0.099 | LTP from K = 11 | max +0.158 at K = 13 | dw(K=20) = +0.110
+   theta_LTD  = 0.3      min -0.092 | LTP from K =  9 | max +0.186 at K = 12 | dw(K=20) = +0.117
+   theta_LTD  = 0.35     min -0.063 | LTP from K =  9 | max +0.210 at K = 12 | dw(K=20) = +0.133
+   theta_LTD  = 0.4      min -0.038 | LTP from K =  9 | max +0.230 at K = 12 | dw(K=20) = +0.147
+   tau_Ca     = 20       min -0.055 | LTP from K = 12 | max +0.174 at K = 15 | dw(K=20) = +0.136
+   tau_Ca     = 30       min -0.063 | LTP from K =  9 | max +0.210 at K = 12 | dw(K=20) = +0.133
+   tau_Ca     = 45       min -0.088 | LTP from K =  6 | max +0.254 at K =  8 | dw(K=20) = +0.125
+   R0         = 2        min -0.063 | LTP from K =  9 | max +0.248 at K = 11 | dw(K=20) = +0.144
+   R0         = 4        min -0.063 | LTP from K =  9 | max +0.210 at K = 12 | dw(K=20) = +0.133
+   R0         = 8        min -0.063 | LTP from K = 10 | max +0.167 at K = 13 | dw(K=20) = +0.117
+   g_NMDA     = 5        min -0.068 | LTP from K = 12 | max +0.162 at K = 15 | dw(K=20) = +0.131
+   g_NMDA     = 6        min -0.063 | LTP from K =  9 | max +0.210 at K = 12 | dw(K=20) = +0.133
+   g_NMDA     = 7        min -0.074 | LTP from K =  6 | max +0.263 at K =  9 | dw(K=20) = +0.135
+   g_neck     = 1        min -0.059 | LTP from K =  6 | max +0.251 at K =  9 | dw(K=20) = +0.134
+   g_neck     = 2        min -0.063 | LTP from K =  9 | max +0.210 at K = 12 | dw(K=20) = +0.133
+   g_neck     = 4        min -0.067 | LTP from K = 10 | max +0.194 at K = 13 | dw(K=20) = +0.133
+   eta_LTD    = 0.005    min -0.033 | LTP from K =  9 | max +0.254 at K = 12 | dw(K=20) = +0.161
+   eta_LTD    = 0.01     min -0.063 | LTP from K =  9 | max +0.210 at K = 12 | dw(K=20) = +0.133
+   eta_LTD    = 0.02     min -0.119 | LTP from K = 10 | max +0.131 at K = 12 | dw(K=20) = +0.082
+   tau_R      = 1000     min -0.063 | LTP from K =  9 | max +0.215 at K = 12 | dw(K=20) = +0.152
+   tau_R      = 60000    min -0.063 | LTP from K =  9 | max +0.210 at K = 12 | dw(K=20) = +0.133
+   tau_R      = 600000   min -0.063 | LTP from K =  9 | max +0.210 at K = 12 | dw(K=20) = +0.133
+   Saved: figures_supp/figS5_parameter_robustness.png
+> Figure S6: protocol dependence
+   Single pulse alone +0.000 | +4 +0.000 | +10 +0.000
+   20 Hz x3     alone -0.001 | +4 -0.023 | +10 +0.169
+   5 Hz x20     alone +0.000 | +4 +0.000 | +10 +0.000
+   20 Hz x20    alone -0.203 | +4 -0.412 | +10 +0.264
+   TBS 4x4      alone +0.210 | +4 +0.538 | +10 +0.271
+   100 Hz x20   alone +0.986 | +4 +0.555 | +10 +0.272
+   Saved: figures_supp/figS6_protocol_dependence.png
+> Figure S7: operating regime
+   g_L     = 2.5    LTP from K = 4 | max dw = +0.384 | min dw = -0.063
+   g_L     = 5      LTP from K = 9 | max dw = +0.210 | min dw = -0.063
+   g_L     = 10     LTP from K = 19 | max dw = +0.086 | min dw = -0.072
+   g_L     = 20     LTP from K = NaN | max dw = +0.000 | min dw = -0.026
+   g_AMPA  = 2      LTP from K = 9 | max dw = +0.210 | min dw = -0.063
+   g_AMPA  = 1.5    LTP from K = 11 | max dw = +0.190 | min dw = -0.073
+   g_AMPA  = 1      LTP from K = 13 | max dw = +0.166 | min dw = -0.074
+   E_L     = -70    LTP from K = 9 | max dw = +0.210 | min dw = -0.063
+   E_L     = -75    LTP from K = 12 | max dw = +0.173 | min dw = -0.062
+   E_L     = -80    LTP from K = 15 | max dw = +0.146 | min dw = -0.058
+   Saved: figures_supp/figS7_operating_regime.png
+Supplementary figures done.
+> Convergence check (Delta w_1, s1 = sn = 0.5)
+   K             0       1       2       3       4       5       6       7       8       9      10      11      12      13      14      15      16      17      18      19      20
+   dt=0.1     -0.001  -0.004  -0.009  -0.015  -0.023  -0.035  -0.048  -0.063  -0.046  +0.075  +0.169  +0.207  +0.210  +0.200  +0.188  +0.177  +0.167  +0.157  +0.149  +0.141  +0.133
+   dt=0.05    -0.001  -0.004  -0.009  -0.015  -0.023  -0.034  -0.047  -0.062  -0.053  +0.067  +0.164  +0.205  +0.209  +0.200  +0.188  +0.177  +0.166  +0.157  +0.148  +0.141  +0.133
+   dt=0.025   -0.001  -0.004  -0.009  -0.015  -0.023  -0.034  -0.047  -0.062  -0.055  +0.063  +0.161  +0.204  +0.209  +0.199  +0.188  +0.177  +0.166  +0.157  +0.148  +0.141  +0.133
+   dt=0.0125  -0.001  -0.004  -0.009  -0.014  -0.022  -0.033  -0.047  -0.062  -0.057  +0.061  +0.160  +0.203  +0.209  +0.199  +0.188  +0.177  +0.166  +0.157  +0.148  +0.141  +0.133
+   dt = 0.1 vs 0.0125: max |diff| = 0.0140 at K = 9, median = 0.00047
+   dt = 0.05 vs 0.0125: max |diff| = 0.0060 at K = 9, median = 0.00020
+   dt = 0.025 vs 0.0125: max |diff| = 0.0020 at K = 9, median = 0.00007
+Dendritic neighbourhood plasticity model - revised figures (09-Oct-2026 22:09:02)
+
+> Figure 1: model schematic
+   Saved: figures_main/fig1_schematic.png
+> Figure 2: neighbourhood selects plasticity outcome
+   K =  0: dw = -0.001, peak Ca = 0.363, peak Vd = -68.0 mV, peak Vs = -51.8 mV, R_final = 4.00
+   K =  6: dw = -0.048, peak Ca = 0.533, peak Vd = -56.0 mV, peak Vs = -46.0 mV, R_final = 4.34
+   K = 12: dw = +0.210, peak Ca = 0.857, peak Vd = -42.8 mV, peak Vs = -36.7 mV, R_final = 1.28
+   Saved: figures_main/fig2_neighbourhood_selects_sign.png
+> Figure 3: phase diagram
+   min dw = -0.082, max dw = 0.952; LTD cells (<-0.01): 197, LTP cells (>0.01): 386, of 693
+   target alone: max dw = 0.000 (never LTP for strengths <= 1.0)
+   Saved: figures_main/fig3_phase_diagram.png
+> Figure 4: non-monotonic neighbourhood dependence
+   LTD for K = 3..8 (min -0.063 at K = 7); LTP from K = 9; max dw = 0.210 at K = 12; dw(K=20) = 0.133
+   R_final at K = 0/12/20: 4.00 / 1.28 / 1.21; max |total change| = 0.0127
+   K = 6: min dw = -0.073, max dw = +0.013 at s_n = 1.50, dw(s_n = 1.5) = +0.013
+   K = 10: min dw = -0.072, max dw = +0.169 at s_n = 0.50, dw(s_n = 1.5) = +0.121
+   K = 14: min dw = -0.059, max dw = +0.439 at s_n = 0.35, dw(s_n = 1.5) = +0.093
+   s_target = 0.4: min dw = -0.068, LTP from K = 13, max dw = +0.045 at K = 20, dw(K=20) = +0.045
+   s_target = 0.5: min dw = -0.063, LTP from K = 9, max dw = +0.210 at K = 12, dw(K=20) = +0.133
+   s_target = 0.6: min dw = -0.069, LTP from K = 7, max dw = +0.462 at K = 12, dw(K=20) = +0.191
+   s_target = 0.7: min dw = -0.070, LTP from K = 5, max dw = +0.651 at K = 10, dw(K=20) = +0.231
+   Saved: figures_main/fig4_ltd_facilitation_competition.png
+> Figure 5: 2x2 mechanistic dissection
+   matched B_fixed = 0.0634 (target-alone peak Ca = 0.363)
+   Full model         dw(K=0) = -0.001, dw(K=12) = +0.210, dw(K=20) = +0.133, max = +0.210, branch sum dw(K=20) = +2.80
+   Fixed Mg block     dw(K=0) = -0.002, dw(K=12) = +0.000, dw(K=20) = +0.000, max = +0.000, branch sum dw(K=20) = +0.00
+   No pool            dw(K=0) = -0.001, dw(K=12) = +0.694, dw(K=20) = +1.108, max = +1.108, branch sum dw(K=20) = +23.26
+   Neither            dw(K=0) = -0.002, dw(K=12) = +0.000, dw(K=20) = +0.000, max = +0.000, branch sum dw(K=20) = +0.00
+   Saved: figures_main/fig5_mechanistic_dissection.png
+> Figure 6: competition and normalization across a branch
+   Full model sum(w): 10.50 -> 13.86 | LTP 9, LTD 3 of 14 active | inactive max|dw| = 0 | corr(s, dw) = 0.88
+   No pool    sum(w): 10.50 -> 19.96 | LTP 10, LTD 2 of 14 active | inactive max|dw| = 0 | corr(s, dw) = 0.85
+   Saved: figures_main/fig6_competition_normalization.png
+> Figure 7: frequency dependence, weight dependence and history
+   freq response K =  0: +0.000 +0.000 +0.000 +0.000 -0.203 +0.925 +0.986 
+   freq response K =  4: +0.000 +0.000 +0.000 +0.000 -0.412 +0.549 +0.555 
+   freq response K = 10: +0.000 +0.000 +0.000 -0.294 +0.264 +0.272 +0.272 
+   freq response K = 16: -0.003 -0.007 -0.166 +0.121 +0.173 +0.173 +0.173 
+   w0 dependence K =  0: +0.00 +0.00 +0.00 +0.00 -0.00 -0.02 -0.07 -0.11 +0.08 +0.25 +0.32 +0.29 +0.21 +0.13 +0.03 -0.06 -0.15 -0.25 -0.34 
+   w0 dependence K =  6: +0.00 +0.00 +0.00 -0.01 -0.05 +0.03 +0.38 +0.58 +0.61 +0.54 +0.46 +0.37 +0.28 +0.18 +0.08 -0.02 -0.12 -0.22 -0.33 
+   w0 dependence K = 12: +0.00 +0.00 -0.02 -0.00 +0.21 +0.44 +0.45 +0.36 +0.25 +0.14 +0.04 -0.05 -0.14 -0.24 -0.33 -0.42 -0.52 -0.61 -0.70 
+   R_init dependence K = 10: dw(R=4) = +0.169, dw(R=0) = -0.067
+   R_init dependence K = 12: dw(R=4) = +0.210, dw(R=0) = -0.053
+   R_init dependence K = 16: dw(R=4) = +0.167, dw(R=0) = -0.043
+   Saved: figures_main/fig7_frequency_weight_history.png
+Main figures done.
+
+> Figure S1: electrical calibration
+   single input: spine-head EPSP = 16.6 mV, branch EPSP = 1.44 mV, ratio = 11.5
+   branch depolarization, single pulse: n=5: 7.1, n=10: 13.8, n=21: 27.7 mV (AMPA-only n=21: 21.6 mV)
+   branch depolarization, 20-Hz burst: n=1: 1.97, n=5: 9.9, n=10: 20.5, n=13: 27.2, n=21: 42.9 mV
+   burst, AMPA only: n=10: 12.6, n=21: 23.1 mV; NMDA boost at n=10: 62%, n=21: 86%
+   Saved: figures_supp/figS1_electrical_calibration.png
+> Figure S2: weight stabilization
+   K = 12: dw(400 ms) = +0.2099, dw(1000 ms) = +0.2099; |sum w + R change| = 3.56e-02
+   Saved: figures_supp/figS2_weight_stabilization.png
+> Figure S3: timing window
+   K = 9: dw(0) = +0.075, max +0.075 at +0 ms, min -0.083 at +20 ms
+   K = 12: dw(0) = +0.210, max +0.341 at +40 ms, min -0.092 at +80 ms
+   Saved: figures_supp/figS3_timing_window.png
+> Figure S4: history dependence
+   tau_R =  1000 ms: dw per epoch = +0.215 +0.154 +0.127 
+   tau_R = 10000 ms: dw per epoch = +0.210 +0.034 +0.032 
+   tau_R = 60000 ms: dw per epoch = +0.210 +0.008 +0.006 
+   control (epoch 2, tau_R = 60 s): epoch 1 +0.210 | depleted pool + evolved weights +0.009 | pool restored +0.174 | weights reset +0.038
+   Saved: figures_supp/figS4_history_dependence.png
+> Figure S5: parameter robustness
+   theta_LTP  = 0.5      min -0.035 | LTP from K =  6 | max +0.278 at K = 10 | dw(K=20) = +0.155
+   theta_LTP  = 0.6      min -0.063 | LTP from K =  9 | max +0.210 at K = 12 | dw(K=20) = +0.133
+   theta_LTP  = 0.7      min -0.099 | LTP from K = 11 | max +0.158 at K = 13 | dw(K=20) = +0.110
+   theta_LTD  = 0.3      min -0.092 | LTP from K =  9 | max +0.186 at K = 12 | dw(K=20) = +0.117
+   theta_LTD  = 0.35     min -0.063 | LTP from K =  9 | max +0.210 at K = 12 | dw(K=20) = +0.133
+   theta_LTD  = 0.4      min -0.038 | LTP from K =  9 | max +0.230 at K = 12 | dw(K=20) = +0.147
+   tau_Ca     = 20       min -0.055 | LTP from K = 12 | max +0.174 at K = 15 | dw(K=20) = +0.136
+   tau_Ca     = 30       min -0.063 | LTP from K =  9 | max +0.210 at K = 12 | dw(K=20) = +0.133
+   tau_Ca     = 45       min -0.088 | LTP from K =  6 | max +0.254 at K =  8 | dw(K=20) = +0.125
+   R0         = 2        min -0.063 | LTP from K =  9 | max +0.248 at K = 11 | dw(K=20) = +0.144
+   R0         = 4        min -0.063 | LTP from K =  9 | max +0.210 at K = 12 | dw(K=20) = +0.133
+   R0         = 8        min -0.063 | LTP from K = 10 | max +0.167 at K = 13 | dw(K=20) = +0.117
+   g_NMDA     = 5        min -0.068 | LTP from K = 12 | max +0.162 at K = 15 | dw(K=20) = +0.131
+   g_NMDA     = 6        min -0.063 | LTP from K =  9 | max +0.210 at K = 12 | dw(K=20) = +0.133
+   g_NMDA     = 7        min -0.074 | LTP from K =  6 | max +0.263 at K =  9 | dw(K=20) = +0.135
+   g_neck     = 1        min -0.059 | LTP from K =  6 | max +0.251 at K =  9 | dw(K=20) = +0.134
+   g_neck     = 2        min -0.063 | LTP from K =  9 | max +0.210 at K = 12 | dw(K=20) = +0.133
+   g_neck     = 4        min -0.067 | LTP from K = 10 | max +0.194 at K = 13 | dw(K=20) = +0.133
+   eta_LTD    = 0.005    min -0.033 | LTP from K =  9 | max +0.254 at K = 12 | dw(K=20) = +0.161
+   eta_LTD    = 0.01     min -0.063 | LTP from K =  9 | max +0.210 at K = 12 | dw(K=20) = +0.133
+   eta_LTD    = 0.02     min -0.119 | LTP from K = 10 | max +0.131 at K = 12 | dw(K=20) = +0.082
+   tau_R      = 1000     min -0.063 | LTP from K =  9 | max +0.215 at K = 12 | dw(K=20) = +0.152
+   tau_R      = 60000    min -0.063 | LTP from K =  9 | max +0.210 at K = 12 | dw(K=20) = +0.133
+   tau_R      = 600000   min -0.063 | LTP from K =  9 | max +0.210 at K = 12 | dw(K=20) = +0.133
+   Saved: figures_supp/figS5_parameter_robustness.png
+> Figure S6: protocol dependence
+   Single pulse alone +0.000 | +4 +0.000 | +10 +0.000
+   20 Hz x3     alone -0.001 | +4 -0.023 | +10 +0.169
+   5 Hz x20     alone +0.000 | +4 +0.000 | +10 +0.000
+   20 Hz x20    alone -0.203 | +4 -0.412 | +10 +0.264
+   TBS 4x4      alone +0.210 | +4 +0.538 | +10 +0.271
+   100 Hz x20   alone +0.986 | +4 +0.555 | +10 +0.272
+   Saved: figures_supp/figS6_protocol_dependence.png
+> Figure S7: operating regime
+   g_L     = 2.5    LTP from K = 4 | max dw = +0.384 | min dw = -0.063
+   g_L     = 5      LTP from K = 9 | max dw = +0.210 | min dw = -0.063
+   g_L     = 10     LTP from K = 19 | max dw = +0.086 | min dw = -0.072
+   g_L     = 20     LTP from K = NaN | max dw = +0.000 | min dw = -0.026
+   g_AMPA  = 2      LTP from K = 9 | max dw = +0.210 | min dw = -0.063
+   g_AMPA  = 1.5    LTP from K = 11 | max dw = +0.190 | min dw = -0.073
+   g_AMPA  = 1      LTP from K = 13 | max dw = +0.166 | min dw = -0.074
+   E_L     = -70    LTP from K = 9 | max dw = +0.210 | min dw = -0.063
+   E_L     = -75    LTP from K = 12 | max dw = +0.173 | min dw = -0.062
+   E_L     = -80    LTP from K = 15 | max dw = +0.146 | min dw = -0.058
+   Saved: figures_supp/figS7_operating_regime.png
+Supplementary figures done.
+> Convergence check (Delta w_1, s1 = sn = 0.5)
+   K             0       1       2       3       4       5       6       7       8       9      10      11      12      13      14      15      16      17      18      19      20
+   dt=0.1     -0.001  -0.004  -0.009  -0.015  -0.023  -0.035  -0.048  -0.063  -0.046  +0.075  +0.169  +0.207  +0.210  +0.200  +0.188  +0.177  +0.167  +0.157  +0.149  +0.141  +0.133
+   dt=0.05    -0.001  -0.004  -0.009  -0.015  -0.023  -0.034  -0.047  -0.062  -0.053  +0.067  +0.164  +0.205  +0.209  +0.200  +0.188  +0.177  +0.166  +0.157  +0.148  +0.141  +0.133
+   dt=0.025   -0.001  -0.004  -0.009  -0.015  -0.023  -0.034  -0.047  -0.062  -0.055  +0.063  +0.161  +0.204  +0.209  +0.199  +0.188  +0.177  +0.166  +0.157  +0.148  +0.141  +0.133
+   dt=0.0125  -0.001  -0.004  -0.009  -0.014  -0.022  -0.033  -0.047  -0.062  -0.057  +0.061  +0.160  +0.203  +0.209  +0.199  +0.188  +0.177  +0.166  +0.157  +0.148  +0.141  +0.133
+   dt = 0.1 vs 0.0125: max |diff| = 0.0140 at K = 9, median = 0.00047
+   dt = 0.05 vs 0.0125: max |diff| = 0.0060 at K = 9, median = 0.00020
+   dt = 0.025 vs 0.0125: max |diff| = 0.0020 at K = 9, median = 0.00007
